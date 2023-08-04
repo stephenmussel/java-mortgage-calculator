@@ -11,13 +11,19 @@ public class Main {
 
         final int PERCENT = 100;
         final int MONTHS_IN_YEARS = 12;
+        int principal = 0;
+
 
         Scanner scanner = new Scanner(System.in);
 
-//        NOTES: if input is between 1,000 and 1,000,000 continue to interest rate
-//        NOTES: if input is invalid print reminder and try input again
-        System.out.println("Principal: ");
-        int principal = scanner.nextInt();
+        while (true) {
+            System.out.println("Principal: ");
+             principal = scanner.nextInt();
+            if (principal >= 1_000 && principal <= 1_000_000) {
+                break;
+            }
+            System.out.println("Principal must be between 1,000 and 1,000,000");
+        }
 
 //        NOTES: if input is between 1 and 30 continue to payment terms
 //        NOTES: if input is invalid print reminder and try input again
