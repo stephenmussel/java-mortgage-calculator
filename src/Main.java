@@ -1,13 +1,8 @@
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-//        DONE: take input for principal
-//        DONE: take input for annual interest rate (%)
-//        DONE: take input for payment terms in years
-//        TODO: calculate mortgage
-//        DESC: mortgage = principal(monthlyInterest(1 + monthlyInterest)^terms/((1 + monthlyInterest)^terms) - 1))
 
         Scanner scanner = new Scanner(System.in);
 
@@ -21,12 +16,12 @@ public class Main {
         System.out.println("Payment Terms (years): ");
         byte years = scanner.nextByte();
         int months = years * 12;
-        System.out.println(months);
 
         double mortgage = principal
                 * (monthlyInterest * (Math.pow(1 + monthlyInterest, months)))
                 / (Math.pow(1 + monthlyInterest, months) -1);
+        String formattedMortgage = NumberFormat.getCurrencyInstance().format(mortgage);
 
-        System.out.println("Monthly Mortgage Payment: " + mortgage);
+        System.out.println("Monthly Mortgage Payment: " + formattedMortgage);
     }
 }
