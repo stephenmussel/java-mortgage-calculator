@@ -4,10 +4,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-//        TODO: provide input validation
-//        DESC: principal values between 1,000 and 1,000,000. invalid input prints reminder
-//        DESC: annual interest rate value between 1 and 30. invalid input prints reminder
-//        DESC: terms value between 1 and 30. invalid input prints reminder
+//        TODO: refactor
+//        DESC: create method of calculating mortgage
+//        DESC: create method for capturing inputs
 
         final int PERCENT = 100;
         final int MONTHS_IN_YEARS = 12;
