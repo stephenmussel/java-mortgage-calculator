@@ -11,6 +11,10 @@ public class Main {
 
         System.out.println("Principal: ");
         int principal = scanner.nextInt();
-        System.out.println(principal);
+
+        System.out.println("Annual Interest Rate: ");
+        float annualInterest = scanner.nextFloat();
+        float monthlyInterest = annualInterest / 100 / 12;
+        System.out.println(monthlyInterest);
     }
 }
