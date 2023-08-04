@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-//        TODO: take input for principal
-//        TODO: take input for annual interest rate (%)
-//        TODO: take input for payment period in years
+//        DONE: take input for principal
+//        DONE: take input for annual interest rate (%)
+//        DONE: take input for payment terms in years
 
         Scanner scanner = new Scanner(System.in);
 
@@ -15,6 +15,10 @@ public class Main {
         System.out.println("Annual Interest Rate: ");
         float annualInterest = scanner.nextFloat();
         float monthlyInterest = annualInterest / 100 / 12;
-        System.out.println(monthlyInterest);
+
+        System.out.println("Payment Terms (years): ");
+        byte years = scanner.nextByte();
+        int months = years * 12;
+        System.out.println(months);
     }
 }
