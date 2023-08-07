@@ -6,11 +6,6 @@ public class Main {
 
 //        ADD: payment schedule feature
 //        DESC: display remaining balance after each payment
-//        DESC: balance = L[(1 + c)^n - (1 + c)^p]/[(1 + c)^n -1]
-//        DESC: L is principal
-//        DESC: c is monthly interest
-//        DESC: n is number of payments
-//        DESC: p is number of payments made
 
         int principal = (int) readInput("Principal: ", 1_000, 1_000_000);
         float annualInterest = (float) readInput("Annual Interest Rate: ", 1, 30);
@@ -42,6 +37,25 @@ public class Main {
             System.out.println("Enter a value between " + min + " and " + max);
         }
         return value;
+    }
+
+//        DESC: balance = L[(1 + c)^n - (1 + c)^p]/[(1 + c)^n - 1]
+//        DESC: L is principal
+//        DESC: c is monthly interest
+//        DESC: n is number of payments
+//        DESC: p is number of payments made
+
+    public static double calculateBalance(int principal, float annualInterest, byte years, int numberOfPaymentsMade) {
+
+        final int PERCENT = 100;
+        final int MONTHS_IN_YEARS = 12;
+
+        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEARS;
+        int numberOfPayments = years * MONTHS_IN_YEARS;
+
+        double balance = principal
+                * (Math.pow(1 + monthlyInterest, numberOfPayments) - Math.pow(1 + monthlyInterest, numberOfPaymentsMade))
+                / (Math.pow(1 + monthlyInterest, numberOfPayments) - 1);
     }
 
     public static double calculateMortgage(int principal, float annualInterest, byte years) {
