@@ -48,10 +48,10 @@ public class Main {
     public static double calculateBalance(int principal, float annualInterest, byte years, int numberOfPaymentsMade) {
 
         final int PERCENT = 100;
-        final int MONTHS_IN_YEARS = 12;
+        final int MONTHS_IN_YEAR = 12;
 
-        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEARS;
-        int numberOfPayments = years * MONTHS_IN_YEARS;
+        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
+        int numberOfPayments = years * MONTHS_IN_YEAR;
 
         double balance = principal
                 * (Math.pow(1 + monthlyInterest, numberOfPayments) - Math.pow(1 + monthlyInterest, numberOfPaymentsMade))
@@ -61,10 +61,10 @@ public class Main {
     public static double calculateMortgage(int principal, float annualInterest, byte years) {
 
         final int PERCENT = 100;
-        final int MONTHS_IN_YEARS = 12;
+        final int MONTHS_IN_YEAR = 12;
 
-        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEARS;
-        int months = years * MONTHS_IN_YEARS;
+        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
+        int months = years * MONTHS_IN_YEAR;
 
         double mortgage = principal
                 * (monthlyInterest * (Math.pow(1 + monthlyInterest, months)))
