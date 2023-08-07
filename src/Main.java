@@ -4,7 +4,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-//        TODO: refactor
+//        ADD: payment schedule feature
+//        DESC: display remaining balance after each payment
 
         int principal = (int) readInput("Principal: ", 1_000, 1_000_000);
         float annualInterest = (float) readInput("Annual Interest Rate: ", 1, 30);
