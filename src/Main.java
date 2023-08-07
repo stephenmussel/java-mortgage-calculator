@@ -5,40 +5,10 @@ public class Main {
     public static void main(String[] args) {
 
 //        TODO: refactor
-//        DESC: create method for capturing inputs
-
-//        int principal = 0;
-        float annualInterest = 0;
-        byte years = 0;
-
-        Scanner scanner = new Scanner(System.in);
 
         int principal = (int) readInput("Principal: ", 1_000, 1_000_000);
-
-//        while (true) {
-//            System.out.println("Principal: ");
-//            principal = scanner.nextInt();
-//            if (principal >= 1_000 && principal <= 1_000_000) {
-//                break;
-//            }
-//            System.out.println("Principal must be between 1,000 and 1,000,000");
-//        }
-
-        while (true) {
-            System.out.println("Annual Interest Rate: ");
-            annualInterest = scanner.nextFloat();
-            if (annualInterest >= 1 && annualInterest <= 30)
-                break;
-            System.out.println("Annual Interest Rate must be between 1 and 30");
-        }
-
-        while (true) {
-            System.out.println("Payment Terms (years): ");
-            years = scanner.nextByte();
-            if (years >= 1 && years <= 30)
-                break;
-            System.out.println("Payment terms (years) must be between 1 and 30");
-        }
+        float annualInterest = (float) readInput("Annual Interest Rate: ", 1, 30);
+        byte years = (byte) readInput("Payment terms (years: ", 1, 30);
 
         double mortgage = calculateMortgage(principal, annualInterest, years);
 
@@ -46,16 +16,16 @@ public class Main {
         System.out.println("Monthly Mortgage Payment: " + formattedMortgage);
     }
 
-    public static double readInput(String prompt, double min, double max) {
+    public static double readInput(String prompt, int min, int max) {
         Scanner scanner = new Scanner(System.in);
         double value;
 
         while (true) {
-            System.out.println(prompt);
+            System.out.print(prompt);
             value = scanner.nextFloat();
             if (value >= min && value <= max)
                 break;
-            System.out.println("Annual Interest Rate must be between " + min + " and " + max);
+            System.out.println("Enter a value between " + min + " and " + max);
         }
         return value;
     }
