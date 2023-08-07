@@ -39,15 +39,24 @@ public class Main {
             System.out.println("Payment terms (years) must be between 1 and 30");
         }
 
-//        TODO: move this to it's own method
-//        double mortgage = principal
-//                * (monthlyInterest * (Math.pow(1 + monthlyInterest, months)))
-//                / (Math.pow(1 + monthlyInterest, months) - 1);
-
         double mortgage = calculateMortgage(principal, annualInterest, years);
 
         String formattedMortgage = NumberFormat.getCurrencyInstance().format(mortgage);
         System.out.println("Monthly Mortgage Payment: " + formattedMortgage);
+    }
+
+    public static double readInput(String prompt, double min, double max) {
+        Scanner scanner = new Scanner(System.in);
+        double value;
+        
+        while (true) {
+            System.out.println(prompt);
+            value = scanner.nextFloat();
+            if (value >= min && value <= max)
+                break;
+            System.out.println("Annual Interest Rate must be between " + min + " and " + max);
+        }
+        return value;
     }
 
     public static double calculateMortgage(int principal, float annualInterest, byte years) {
