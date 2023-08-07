@@ -5,23 +5,24 @@ public class Main {
     public static void main(String[] args) {
 
 //        TODO: refactor
-//        DESC: create method of calculating mortgage
 //        DESC: create method for capturing inputs
 
-        int principal = 0;
+//        int principal = 0;
         float annualInterest = 0;
         byte years = 0;
 
         Scanner scanner = new Scanner(System.in);
 
-        while (true) {
-            System.out.println("Principal: ");
-            principal = scanner.nextInt();
-            if (principal >= 1_000 && principal <= 1_000_000) {
-                break;
-            }
-            System.out.println("Principal must be between 1,000 and 1,000,000");
-        }
+        int principal = (int) readInput("Principal: ", 1_000, 1_000_000);
+
+//        while (true) {
+//            System.out.println("Principal: ");
+//            principal = scanner.nextInt();
+//            if (principal >= 1_000 && principal <= 1_000_000) {
+//                break;
+//            }
+//            System.out.println("Principal must be between 1,000 and 1,000,000");
+//        }
 
         while (true) {
             System.out.println("Annual Interest Rate: ");
@@ -48,7 +49,7 @@ public class Main {
     public static double readInput(String prompt, double min, double max) {
         Scanner scanner = new Scanner(System.in);
         double value;
-        
+
         while (true) {
             System.out.println(prompt);
             value = scanner.nextFloat();
