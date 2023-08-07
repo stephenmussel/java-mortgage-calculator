@@ -9,8 +9,8 @@ public class Main {
 //        DESC: create method for capturing inputs
 
         int principal = 0;
-        float monthlyInterest = 0;
-        int months = 0;
+        float annualInterest = 0;
+        byte years = 0;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -25,7 +25,7 @@ public class Main {
 
         while (true) {
             System.out.println("Annual Interest Rate: ");
-            float annualInterest = scanner.nextFloat();
+            annualInterest = scanner.nextFloat();
             if (annualInterest >= 1 && annualInterest <= 30)
                 break;
             System.out.println("Annual Interest Rate must be between 1 and 30");
@@ -33,7 +33,7 @@ public class Main {
 
         while (true) {
             System.out.println("Payment Terms (years): ");
-            byte years = scanner.nextByte();
+            years = scanner.nextByte();
             if (years >= 1 && years <= 30)
                 break;
             System.out.println("Payment terms (years) must be between 1 and 30");
@@ -43,6 +43,8 @@ public class Main {
 //        double mortgage = principal
 //                * (monthlyInterest * (Math.pow(1 + monthlyInterest, months)))
 //                / (Math.pow(1 + monthlyInterest, months) - 1);
+
+        double mortgage = calculateMortgage(principal, annualInterest, years);
 
         String formattedMortgage = NumberFormat.getCurrencyInstance().format(mortgage);
         System.out.println("Monthly Mortgage Payment: " + formattedMortgage);
