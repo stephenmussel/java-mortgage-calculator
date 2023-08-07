@@ -6,6 +6,11 @@ public class Main {
 
 //        ADD: payment schedule feature
 //        DESC: display remaining balance after each payment
+//        DESC: balance = L[(1 + c)^n - (1 + c)^p]/[(1 + c)^n -1]
+//        DESC: L is principal
+//        DESC: c is monthly interest
+//        DESC: n is number of payments
+//        DESC: p is number of payments made
 
         int principal = (int) readInput("Principal: ", 1_000, 1_000_000);
         float annualInterest = (float) readInput("Annual Interest Rate: ", 1, 30);
