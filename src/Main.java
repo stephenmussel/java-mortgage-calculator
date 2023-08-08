@@ -2,6 +2,10 @@ import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Main {
+
+    final static int PERCENT = 100;
+    final static int MONTHS_IN_YEAR = 12;
+
     public static void main(String[] args) {
 
 //        ADD: payment schedule feature
@@ -56,9 +60,6 @@ public class Main {
 
     public static double calculateBalance(int principal, float annualInterest, byte years, int numberOfPaymentsMade) {
 
-        final int PERCENT = 100;
-        final int MONTHS_IN_YEAR = 12;
-
         float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
         int numberOfPayments = years * MONTHS_IN_YEAR;
 
@@ -70,9 +71,6 @@ public class Main {
     }
 
     public static double calculateMortgage(int principal, float annualInterest, byte years) {
-
-        final int PERCENT = 100;
-        final int MONTHS_IN_YEAR = 12;
 
         float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
         int months = years * MONTHS_IN_YEAR;
