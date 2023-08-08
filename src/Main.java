@@ -15,15 +15,16 @@ public class Main {
 
         int principal = (int) readInput("Principal: ", 1_000, 1_000_000);
         float annualInterest = (float) readInput("Annual Interest Rate: ", 1, 30);
-        byte years = (byte) readInput("Payment terms (years: ", 1, 30);
+        byte years = (byte) readInput("Payment terms (years): ", 1, 30);
 
-        double mortgage = calculateMortgage(principal, annualInterest, years);
-
-        String formattedMortgage = NumberFormat.getCurrencyInstance().format(mortgage);
-        System.out.println();
-        System.out.println("MORTGAGE");
-        System.out.println("--------");
-        System.out.println("Monthly Mortgage Payment: " + formattedMortgage);
+//        double mortgage = calculateMortgage(principal, annualInterest, years);
+//
+//        String formattedMortgage = NumberFormat.getCurrencyInstance().format(mortgage);
+//        System.out.println();
+//        System.out.println("MORTGAGE");
+//        System.out.println("--------");
+//        System.out.println("Monthly Mortgage Payment: " + formattedMortgage);
+        printMortgage(principal, annualInterest, years);
 
         System.out.println();
         System.out.println("PAYMENT SCHEDULE");
@@ -36,6 +37,16 @@ public class Main {
             String formattedNewBalance = NumberFormat.getCurrencyInstance().format(newBalance);
             System.out.println(formattedNewBalance);
         }
+    }
+
+    public static void printMortgage(int principal, float annualInterest, byte years) {
+        double mortgage = calculateMortgage(principal, annualInterest, years);
+
+        String formattedMortgage = NumberFormat.getCurrencyInstance().format(mortgage);
+        System.out.println();
+        System.out.println("MORTGAGE");
+        System.out.println("--------");
+        System.out.println("Monthly Mortgage Payment: " + formattedMortgage);
     }
 
     public static double readInput(String prompt, int min, int max) {
