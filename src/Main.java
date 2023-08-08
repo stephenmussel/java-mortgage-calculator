@@ -7,6 +7,8 @@ public class Main {
 //        ADD: payment schedule feature
 //        DESC: display remaining balance after each payment
 
+        final int MONTHS_IN_YEAR = 12;
+
         int principal = (int) readInput("Principal: ", 1_000, 1_000_000);
         float annualInterest = (float) readInput("Annual Interest Rate: ", 1, 30);
         byte years = (byte) readInput("Payment terms (years: ", 1, 30);
@@ -22,7 +24,14 @@ public class Main {
         System.out.println();
         System.out.println("PAYMENT SCHEDULE");
         System.out.println("----------------");
-        System.out.println("placeholder...");
+
+//      TODO: print balance after each payment until balance is 0
+//      DESC: loop thru number of payments to provide new balance
+        for (short month = 1; month <= years * MONTHS_IN_YEAR; month++) {
+            double newBalance = calculateBalance(principal, annualInterest, years, month);
+            String formattedNewBalance = NumberFormat.getCurrencyInstance().format(newBalance);
+            System.out.println(formattedNewBalance);
+        }
     }
 
     public static double readInput(String prompt, int min, int max) {
