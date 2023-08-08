@@ -8,36 +8,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        ADD: payment schedule feature
-//        DESC: display remaining balance after each payment
-
-        final int MONTHS_IN_YEAR = 12;
-
         int principal = (int) readInput("Principal: ", 1_000, 1_000_000);
         float annualInterest = (float) readInput("Annual Interest Rate: ", 1, 30);
         byte years = (byte) readInput("Payment terms (years): ", 1, 30);
 
-//        double mortgage = calculateMortgage(principal, annualInterest, years);
-//
-//        String formattedMortgage = NumberFormat.getCurrencyInstance().format(mortgage);
-//        System.out.println();
-//        System.out.println("MORTGAGE");
-//        System.out.println("--------");
-//        System.out.println("Monthly Mortgage Payment: " + formattedMortgage);
         printMortgage(principal, annualInterest, years);
         printPaymentSchedule(principal, annualInterest, years);
-
-//        System.out.println();
-//        System.out.println("PAYMENT SCHEDULE");
-//        System.out.println("----------------");
-//
-////      TODO: print balance after each payment until balance is 0
-////      DESC: loop thru number of payments to provide new balance
-//        for (short month = 1; month <= years * MONTHS_IN_YEAR; month++) {
-//            double newBalance = calculateBalance(principal, annualInterest, years, month);
-//            String formattedNewBalance = NumberFormat.getCurrencyInstance().format(newBalance);
-//            System.out.println(formattedNewBalance);
-//        }
     }
 
     public static void printMortgage(int principal, float annualInterest, byte years) {
@@ -74,12 +50,6 @@ public class Main {
         }
         return value;
     }
-
-//        DESC: balance = L[(1 + c)^n - (1 + c)^p]/[(1 + c)^n - 1]
-//        DESC: L is principal
-//        DESC: c is monthly interest
-//        DESC: n is number of payments
-//        DESC: p is number of payments made
 
     public static double calculateBalance(int principal, float annualInterest, byte years, int numberOfPaymentsMade) {
 
