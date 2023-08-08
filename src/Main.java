@@ -25,18 +25,19 @@ public class Main {
 //        System.out.println("--------");
 //        System.out.println("Monthly Mortgage Payment: " + formattedMortgage);
         printMortgage(principal, annualInterest, years);
+        printPaymentSchedule(principal, annualInterest, years);
 
-        System.out.println();
-        System.out.println("PAYMENT SCHEDULE");
-        System.out.println("----------------");
-
-//      TODO: print balance after each payment until balance is 0
-//      DESC: loop thru number of payments to provide new balance
-        for (short month = 1; month <= years * MONTHS_IN_YEAR; month++) {
-            double newBalance = calculateBalance(principal, annualInterest, years, month);
-            String formattedNewBalance = NumberFormat.getCurrencyInstance().format(newBalance);
-            System.out.println(formattedNewBalance);
-        }
+//        System.out.println();
+//        System.out.println("PAYMENT SCHEDULE");
+//        System.out.println("----------------");
+//
+////      TODO: print balance after each payment until balance is 0
+////      DESC: loop thru number of payments to provide new balance
+//        for (short month = 1; month <= years * MONTHS_IN_YEAR; month++) {
+//            double newBalance = calculateBalance(principal, annualInterest, years, month);
+//            String formattedNewBalance = NumberFormat.getCurrencyInstance().format(newBalance);
+//            System.out.println(formattedNewBalance);
+//        }
     }
 
     public static void printMortgage(int principal, float annualInterest, byte years) {
@@ -47,6 +48,17 @@ public class Main {
         System.out.println("MORTGAGE");
         System.out.println("--------");
         System.out.println("Monthly Mortgage Payment: " + formattedMortgage);
+    }
+
+    public static void printPaymentSchedule(int principal, float annualInterest, byte years) {
+        System.out.println();
+        System.out.println("PAYMENT SCHEDULE");
+        System.out.println("----------------");
+        for (short month = 1; month <= years * MONTHS_IN_YEAR; month++) {
+            double newBalance = calculateBalance(principal, annualInterest, years, month);
+            String formattedNewBalance = NumberFormat.getCurrencyInstance().format(newBalance);
+            System.out.println(formattedNewBalance);
+        }
     }
 
     public static double readInput(String prompt, int min, int max) {
