@@ -37,8 +37,15 @@
 <br />
 
 
-A Java project building a command line mortgage calculator. The initial goal is to create an MVP that takes three inputs
-to calculate the monthly mortgage payment. Features will be added as needed.
+A Java project building a command line mortgage calculator. The initial goal was to create an MVP that prompted clients
+to input their
+`Principal`, `Annual Interest Rate`, and `Payment terms (years)` to calculate their monthly mortgage payments.
+A `Payment Schedule`
+feature was added to provide clients with a clear outline of their future payments. The `Payment Schedule` provided a
+new balance for
+each payment made until the balance was paid off. This feature was helpful to show users their current progress while
+making
+payments towards their balance.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -137,10 +144,13 @@ This view shows the Payment Schedule based on the `Payment terms (months)` until
 
 ## Acknowledgments
 
-Thanks to...
+Thanks to my wife and our dog Laurel for the endless support and daily walks as well as ClickUp for providing a
+wonderful tool to assist with direction and focus.
 
 * [Google](http://www.google.com)
 * [Intellij](https://www.jetbrains.com/idea/)
+* [Mosh](https://codewithmosh.com/)
+* [ClickUp](https://app.clickup.com)
 
 <!-- 
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
