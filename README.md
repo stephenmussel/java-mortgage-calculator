@@ -62,7 +62,7 @@ Use the following instructions to set up a local version.
 
 <br />
 
-- TBD
+* [Java Development Kit](https://www.oracle.com/java/technologies/downloads/)
 
 ### Installation
 
@@ -72,6 +72,12 @@ Clone the repo:
 
   ```
   git clone git@github.com:stephenmussel/java-mortgage-calculator.git
+  ```
+
+To run the mortgage calculator in an editor:
+
+  ```
+  Select the Main.java file in your src directory. Run the file and enter a value based on the prompts.
   ```
 
 <!-- USAGE EXAMPLES -->
