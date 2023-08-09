@@ -1,8 +1,7 @@
 # Java Mortgage Calculator
 
-
-
 #### _Duration: One-Day Sprint_
+
 <br />
 
 
@@ -32,15 +31,19 @@
 
 
 <!-- ABOUT THE PROJECT -->
+
 ## About
+
 <br />
 
 
-A Java project building a command line mortgage calculator. The initial goal is to create an MVP that takes three inputs to calculate the monthly mortgage payment. Features will be added as needed. 
+A Java project building a command line mortgage calculator. The initial goal is to create an MVP that takes three inputs
+to calculate the monthly mortgage payment. Features will be added as needed.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
+
 <br />
 
 * [Java Development Kit](https://www.oracle.com/java/technologies/downloads/)
@@ -50,32 +53,63 @@ A Java project building a command line mortgage calculator. The initial goal is 
 
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 Use the following instructions to set up a local version.
 
 ### Prerequisites
+
 <br />
 
 - TBD
 
 ### Installation
+
 <br />
 
 Clone the repo:
+
   ```
   git clone git@github.com:stephenmussel/java-mortgage-calculator.git
   ```
 
-
-
-
 <!-- USAGE EXAMPLES -->
+
 ## Usage
+
 <br />  
 
 
-Coming soon...
+![MortgageCalculatorPrompts](/images/java-mortgage-calculator-terminal-view-1.png)
+<br />
+
+Initial view in Terminal where user is prompted to enter three inputs: `Principal`, `Annual Interest Rate`,
+and `Payment terms (years)`
+<br />
+
+![PrincipalInputValidation](/images/java-mortgage-calculator-principal-input-validation.png)
+<br />
+
+`Principal` input validation
+<br />
+
+![AnnualInterestRateInputValidation](/images/java-mortgage-calculator-annual-interest-rate-input-validation.png)
+<br />
+
+`Annual Interest Rate` input validation
+<br />
+
+![PaymentTermsInputValidation](/images/java-mortgage-calculator-payment-terms-input-validation.png)
+<br />
+
+`Payment terms (years)` input validation
+<br />
+
+![Feeling](/images/java-mortgage-calculator-terminal-view-2.png)
+<br />
+
+This view shows the Payment Schedule based on the `Payment terms (months)` until the balance is `$0.00.`
 <br />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -83,6 +117,7 @@ Coming soon...
 
 
 <!-- CONTACT -->
+
 ## Contact
 
 [LinkedIn](https://www.linkedin.com/in/phaydara-vongsavanthong/)  
@@ -93,6 +128,7 @@ Coming soon...
 
 
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
 Thanks to...
