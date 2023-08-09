@@ -10,9 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b3b7669-950b-4d4f-9a23-f28052ddbb26" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/images/java-mortgage-calculator-terminal-view-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/java-mortgage-calculator-terminal-view-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

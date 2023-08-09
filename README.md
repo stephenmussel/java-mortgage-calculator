@@ -91,19 +91,19 @@ and `Payment terms (years)`
 ![PrincipalInputValidation](/images/java-mortgage-calculator-principal-input-validation.png)
 <br />
 
-`Principal` input validation
+`Principal` input validation where user is prompted to enter input again if value is not between 1,000 and 1,000,000.
 <br />
 
 ![AnnualInterestRateInputValidation](/images/java-mortgage-calculator-annual-interest-rate-input-validation.png)
 <br />
 
-`Annual Interest Rate` input validation
+`Annual Interest Rate` input validation where user is prompted to enter input again if value is not between 1 and 30.
 <br />
 
 ![PaymentTermsInputValidation](/images/java-mortgage-calculator-payment-terms-input-validation.png)
 <br />
 
-`Payment terms (years)` input validation
+`Payment terms (years)` input validation where user is prompted to enter input again if value is not between 1 and 30.
 <br />
 
 ![Feeling](/images/java-mortgage-calculator-terminal-view-2.png)
