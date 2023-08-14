@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
 public class Console {
+
+    public static double readInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextDouble();
+    }
+
     public static double readInput(String prompt, int min, int max) {
         Scanner scanner = new Scanner(System.in);
         double value;
