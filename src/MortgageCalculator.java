@@ -1,3 +1,5 @@
+import java.text.NumberFormat;
+
 public class MortgageCalculator {
 
     public final static int PERCENT = 100;
@@ -34,6 +36,15 @@ public class MortgageCalculator {
                 / (Math.pow(1 + monthlyInterest, months) - 1);
 
         return mortgage;
+    }
+
+    public double[] getRemainingBalances() {
+        var balances = new double[getNumberOfPayments()];
+        for (short month = 1; month <= balances.length; month++) {
+            balances[month - 1] = calculateBalance(month);
+            String formattedNewBalance = NumberFormat.getCurrencyInstance().format(calculateBalance(month));
+            System.out.println(formattedNewBalance);
+        }
     }
 
     private int getNumberOfPayments() {
