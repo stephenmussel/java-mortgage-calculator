@@ -1,6 +1,9 @@
 import java.text.NumberFormat;
 
 // NOTES: what classes do we need?
+// DESC: console that reads input
+// DESC: mortgage calculator
+// DESC: displays calculations
 
 public class Main {
 
