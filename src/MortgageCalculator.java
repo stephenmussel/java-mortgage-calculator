@@ -14,7 +14,7 @@ public class MortgageCalculator {
 
     public double calculateBalance(int numberOfPaymentsMade) {
 
-        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
+        float monthlyInterest = getMonthlyInterest();
         int numberOfPayments = years * MONTHS_IN_YEAR;
 
         double balance = principal
@@ -24,9 +24,13 @@ public class MortgageCalculator {
         return balance;
     }
 
+    private float getMonthlyInterest() {
+        return annualInterest / PERCENT / MONTHS_IN_YEAR;
+    }
+
     public double calculateMortgage() {
 
-        float monthlyInterest = annualInterest / PERCENT / MONTHS_IN_YEAR;
+        float monthlyInterest = getMonthlyInterest();
         int months = years * MONTHS_IN_YEAR;
 
         double mortgage = principal
