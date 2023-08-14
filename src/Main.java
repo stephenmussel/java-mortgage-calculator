@@ -4,9 +4,6 @@
 
 public class Main {
 
-    final static int PERCENT = 100;
-    final static int MONTHS_IN_YEAR = 12;
-
     public static void main(String[] args) {
 
         int principal = (int) Console.readInput("Principal: ", 1_000, 1_000_000);
