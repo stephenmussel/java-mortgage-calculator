@@ -13,8 +13,8 @@ public class Main {
         float annualInterest = (float) Console.readInput("Annual Interest Rate: ", 1, 30);
         byte years = (byte) Console.readInput("Payment terms (years): ", 1, 30);
 
-        new MortgageReport().printMortgage();
-        new MortgageReport().printPaymentSchedule();
+        new MortgageReport(calculator).printMortgage();
+        new MortgageReport(calculator).printPaymentSchedule();
     }
 
 }
