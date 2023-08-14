@@ -22,7 +22,7 @@ public class MortgageCalculator {
         return balance;
     }
 
-    public static double calculateMortgage(int principal, float annualInterest, byte years) {
+    public double calculateMortgage() {
 
         float monthlyInterest = annualInterest / Main.PERCENT / Main.MONTHS_IN_YEAR;
         int months = years * Main.MONTHS_IN_YEAR;
