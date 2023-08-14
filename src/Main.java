@@ -1,5 +1,6 @@
 import java.text.NumberFormat;
-import java.util.Scanner;
+
+// NOTES: what classes do we need?
 
 public class Main {
 
@@ -8,9 +9,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int principal = (int) readInput("Principal: ", 1_000, 1_000_000);
-        float annualInterest = (float) readInput("Annual Interest Rate: ", 1, 30);
-        byte years = (byte) readInput("Payment terms (years): ", 1, 30);
+        int principal = (int) Console.readInput("Principal: ", 1_000, 1_000_000);
+        float annualInterest = (float) Console.readInput("Annual Interest Rate: ", 1, 30);
+        byte years = (byte) Console.readInput("Payment terms (years): ", 1, 30);
 
         printMortgage(principal, annualInterest, years);
         printPaymentSchedule(principal, annualInterest, years);
@@ -35,20 +36,6 @@ public class Main {
             String formattedNewBalance = NumberFormat.getCurrencyInstance().format(newBalance);
             System.out.println(formattedNewBalance);
         }
-    }
-
-    public static double readInput(String prompt, int min, int max) {
-        Scanner scanner = new Scanner(System.in);
-        double value;
-
-        while (true) {
-            System.out.print(prompt);
-            value = scanner.nextFloat();
-            if (value >= min && value <= max)
-                break;
-            System.out.println("Enter a value between " + min + " and " + max);
-        }
-        return value;
     }
 
     public static double calculateBalance(int principal, float annualInterest, byte years, int numberOfPaymentsMade) {
